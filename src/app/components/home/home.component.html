@@ -1,0 +1,8 @@
+<div class="homecontainer">
+<mat-card class="cardcontainer" *ngFor="let element of statuslist | keyvalue" (click)="navigateTo(element.key)">
+    <mat-card-content>
+    {{element.key}} {{element.value}}  
+    </mat-card-content>
+</mat-card>
+
+</div>

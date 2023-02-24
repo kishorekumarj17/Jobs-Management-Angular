@@ -1,0 +1,17 @@
+.homecontainer
+{
+    display: flex;
+    gap:10px;
+}
+.cardcontainer
+{
+    flex:1 1 auto;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) 
+{
+    .homecontainer {
+      flex-direction: column;
+    }
+}

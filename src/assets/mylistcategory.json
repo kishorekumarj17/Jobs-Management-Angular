@@ -1,0 +1,22 @@
+{
+    "count_by_status" : {
+      "CONFIRMED": 2,
+      "ON_MY_WAY": 1,
+      "STARTED" : 2,
+      "COMPLETED" : 1
+    },
+    "count_by_user" : [
+      {
+        "name" : "raghav",
+        "count" : 2
+      },
+      {
+        "name" : "vijay",
+        "count" : 3
+      },
+      {
+        "name" : "ranjith",
+        "count": 2
+      }
+    ]
+  }

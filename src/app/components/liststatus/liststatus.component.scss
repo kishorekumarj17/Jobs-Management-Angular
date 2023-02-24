@@ -1,0 +1,14 @@
+table 
+{
+    width: 50%;
+}
+.mat-header-cell, .mat-cell 
+{
+   text-align: center;
+}
+.jobid:hover
+{
+    text-decoration: underline;
+    color:dodgerblue;
+    cursor: pointer;
+}

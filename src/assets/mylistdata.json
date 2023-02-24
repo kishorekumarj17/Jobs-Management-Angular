@@ -1,0 +1,32 @@
+{
+    "data":[{
+		"job_id": 1,
+		"status": "CONFIRMED",
+		"assigned_to": ["raghav", "vijay"]
+	},
+	{
+		"job_id": 2,
+		"status": "ON_MY_WAY",
+		"assigned_to": ["vijay"]
+	},
+	{
+		"job_id": 3,
+		"status": "CONFIRMED",
+		"assigned_to": ["ranjith"]
+	},
+	{
+		"job_id": 4,
+		"status": "STARTED",
+		"assigned_to": ["raghav"]
+	},
+	{
+		"job_id": 5,
+		"status": "STARTED",
+		"assigned_to": ["ranjith"]
+	},
+	{
+		"job_id": 6,
+		"status": "COMPLETED",
+		"assigned_to": ["vijay"]
+	}]
+}
