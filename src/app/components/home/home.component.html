@@ -1,8 +1,7 @@
 <div class="homecontainer">
 <mat-card class="cardcontainer" *ngFor="let element of statuslist | keyvalue" (click)="navigateTo(element.key)">
     <mat-card-content>
-    {{element.key}} {{element.value}}  
+    <div class="flexelement boldfont">{{element.key}}</div><div class="flexelement borderleft">{{element.value}}</div>
     </mat-card-content>
 </mat-card>
-
 </div>

@@ -1,6 +1,6 @@
 table 
 {
-    width: 50%;
+    width: 100%;
 }
 .mat-header-cell, .mat-cell 
 {
@@ -11,4 +11,8 @@ table
     text-decoration: underline;
     color:dodgerblue;
     cursor: pointer;
+}
+mat-icon
+{
+    color: tomato !important;
 }

@@ -17,7 +17,7 @@
 	{
 		"job_id": 4,
 		"status": "STARTED",
-		"assigned_to": ["raghav"]
+		"assigned_to": ["raghav","ram"]
 	},
 	{
 		"job_id": 5,
@@ -28,5 +28,27 @@
 		"job_id": 6,
 		"status": "COMPLETED",
 		"assigned_to": ["vijay"]
-	}]
+	},
+	{
+		"job_id": 7,
+		"status": "STARTED",
+		"assigned_to": ["vijay"]
+	},
+	{
+		"job_id": 8,
+		"status": "ON_MY_WAY",
+		"assigned_to": ["Kiran"]
+	},
+	{
+		"job_id": 9,
+		"status": "ON_MY_WAY",
+		"assigned_to": ["raghav","Kiran"]
+	}
+	,
+	{
+		"job_id": 10,
+		"status": "COMPLETED",
+		"assigned_to": ["renu","ram"]
+	}
+	]
 }

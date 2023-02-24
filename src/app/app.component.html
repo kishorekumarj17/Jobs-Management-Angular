@@ -1,2 +1,41 @@
-<p>Navbar</p>
-<router-outlet></router-outlet>
+<div class="fixed-head-nav">
+    <mat-toolbar>
+      <button mat-icon-button (click)="drawer.toggle()" aria-label="icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>&nbsp;&nbsp;Job Status App</span>
+      <span class="spacer"></span>
+      <button mat-icon-button aria-label="icon">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </mat-toolbar>  
+  </div>
+  
+  <mat-drawer-container class="sidenav-container mat-typography">
+    <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+      <mat-nav-list>
+        <div style="margin-top: 10vh;"></div>
+  
+        <mat-list-item (click)="navigateTo(['home'])">
+          <mat-icon mat-list-icon>home</mat-icon>
+          <h4>Home</h4>
+        </mat-list-item>
+  
+        <mat-list-item (click)="navigateTo(['jobs','TOTAL'])">
+          <mat-icon mat-list-icon>description</mat-icon>
+          <h4>Job Listing</h4>
+        </mat-list-item>
+  
+      </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+      <br>
+      <div >
+        <h3 *ngFor="let element of mypathdata" style="display: inline;">{{element}}<mat-icon class="iconinlinealign">chevron_right</mat-icon></h3>
+      </div>
+      <br>
+        <router-outlet></router-outlet>
+      <br>
+    </div>
+  </mat-drawer-container>

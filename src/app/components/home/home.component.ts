@@ -15,12 +15,13 @@ export class HomeComponent implements OnInit {
     private router:Router) { }
 
   ngOnInit(): void {
-    this.globalservice.getJobListCategory().subscribe((res:any)=>{
-      this.statuslist=res['count_by_status']
-      console.log(this.statuslist)
-    })
     forkJoin([this.globalservice.getJobList(),this.globalservice.getJobListCategory()]).subscribe((res:any[])=>{
-      this.statuslist=res[1]['count_by_status']
+      let data=res[0].data
+      let obj:any={}
+      data.forEach((e:any)=>{
+        obj[e['status']]=obj[e['status']]? obj[e['status']]+1 :1;
+      })
+      this.statuslist=obj;
       this.statuslist['TOTAL']=res[0].data.length
     })
   }

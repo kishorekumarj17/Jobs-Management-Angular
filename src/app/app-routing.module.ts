@@ -6,6 +6,7 @@ import { ListstatusComponent } from './components/liststatus/liststatus.componen
 
 const routes: Routes = [
   {path:'',component:HomeComponent,pathMatch:'full'},
+  {path:'home',component:HomeComponent},
   {path:'jobs/:status',component:ListstatusComponent},
   {path:'details/:jobid',component:DetailsComponent},
   {path: "**",pathMatch: "full",redirectTo: ""}

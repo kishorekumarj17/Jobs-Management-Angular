@@ -1,0 +1,87 @@
+.fixed-head-nav {
+    
+    position: fixed;
+    z-index: 100;
+    width: 100%  !important;
+}
+.mat-toolbar
+{
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    height: 10vh;
+}
+.sidenav-container
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;  
+}
+
+.sidenav-content
+{
+    margin-top: 60px;
+    padding:20px;
+}
+  
+mat-drawer
+{
+    border-right: 0.5px solid #ddd;
+} 
+
+mat-nav-list 
+{
+    width: 60px;
+    overflow: hidden;
+    transition: width 0.3s;
+  
+    h4 {
+      opacity: 0;
+    }
+}
+  
+mat-drawer:hover 
+{
+    mat-nav-list {
+      width: 200px;
+      h4 {
+        opacity: 1;
+        margin: auto 10px;
+        transition: all 0.1s ease-in 0.2s;
+      }
+    }
+}
+  
+mat-icon
+{
+    color: tomato !important;
+}
+
+@media (max-width: 800px) 
+{
+    mat-drawer:hover
+    {
+        mat-nav-list
+        {
+            width: 60px;
+            overflow: hidden;
+            transition: width 0.3s;
+    
+            h4 {
+            opacity: 0;
+            }
+        }
+    }
+}
+
+.iconinlinealign
+{
+    display: inline-flex;
+    vertical-align:middle;
+}
+
+.spacer
+{
+    flex: 1 1 auto;
+}
