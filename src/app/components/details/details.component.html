@@ -18,20 +18,30 @@
   </mat-card>
 
   <mat-card class="card">
+    <mat-card-content class="chartcontainer">
+      <div>
+        <canvas baseChart class="chart" 
+        [data]="doughnutChartData"
+        [type]="doughnutChartType" [options]="chartOptions">
+        </canvas>
+      </div> 
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="card">
     <mat-card-header class="card-header">
-      <mat-card-title style="margin:12px -16px;">JOB ID: {{dataobj.job_id}}</mat-card-title>
+      <mat-card-title style="margin:12px -16px;">Yearly Data</mat-card-title>
     </mat-card-header>
-    <mat-card-content>
+    <mat-card-content class="chartcontainer">
+      <div>
+        <canvas baseChart class="chart"
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [type]="barChartType">
+        </canvas>
+      </div>
       <br>
-      <p>Status: {{dataobj.status}}</p>
-      <br>
-      Assigned To:
-      <br><br>
-      <mat-chip-list>
-        <mat-chip *ngFor="let name of dataobj.assigned_to">
-            {{name}}
-        </mat-chip>
-      </mat-chip-list>
     </mat-card-content>
   </mat-card>
 </div>

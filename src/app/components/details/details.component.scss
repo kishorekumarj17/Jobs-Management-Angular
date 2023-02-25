@@ -1,5 +1,4 @@
 .card {
-    max-width: 400px;
     flex: 1 1 auto;
   }
 
@@ -13,5 +12,12 @@
 {
     .cardscontainer {
       flex-direction: column;
+      gap: 10px;
     }
+}
+.chartcontainer
+{
+  display: flex;
+  float: 1 1 auto;
+  justify-content: center;
 }

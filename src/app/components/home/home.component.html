@@ -5,3 +5,54 @@
     </mat-card-content>
 </mat-card>
 </div>
+<br>
+<div class="homecontainer">
+<mat-card class="flexible">
+    <span style="color:tomato;font-weight: 500;font-size: 1.3em;vertical-align:bottom;">On the way</span>
+    <span class="buttonStyle" (click)="navigateTo('ON_MY_WAY')">View All</span>
+    <br><br>
+    <table mat-table [dataSource]="onmywaylist">
+        <ng-container matColumnDef="user">
+          <th mat-header-cell *matHeaderCellDef>User</th>
+          <td mat-cell *matCellDef="let element">{{element}}</td>
+        </ng-container>
+        <ng-container matColumnDef="location">
+          <th mat-header-cell *matHeaderCellDef>Location</th>
+          <td mat-cell *matCellDef="let element">Chennai</td>
+        </ng-container>
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Status</th>
+            <td mat-cell *matCellDef="let element"><span style="padding:4px;border-radius: 5px;background-color: rgb(96, 217, 96);color:white">On the way</span></td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <br>
+</mat-card>
+<mat-card class="flexible">
+    <span style="color:tomato;font-weight: 500;font-size: 1.3em;vertical-align: bottom;">Recently Started</span>
+    <br><br>
+    <div class="usercontainer" *ngFor="let user of startedlist">
+        <div style="flex:1 1 auto">
+            <mat-icon class="colorgreywhite" style="font-size: 40px;color:rgb(174, 172, 172)">account_circle</mat-icon>
+        </div>
+        <div style="flex:3 1 auto">
+            {{user}}
+            <br>
+            <span class="colorgreywhite">Chennai</span>
+        </div>
+        <div style="flex:3 1 auto">
+        </div>
+    </div>
+</mat-card>
+<mat-card class="flexible" style="flex:3">
+   
+    <div class="chartcontainer" *ngIf="loaddata">
+        <canvas baseChart class="chart" 
+        [data]="doughnutChartData"
+        [type]="doughnutChartType" [options]="chartOptions">
+        </canvas>
+    </div>
+    
+</mat-card>
+</div>

@@ -10,6 +10,7 @@ import { GlobalService } from 'src/app/common/services/global.service';
 export class ListstatusComponent implements OnInit {
   displayedColumns: string[] = ['jobId','status','assignedTo','details'];
   dataSource = [];
+  loaddata:boolean=false;
   constructor(private globalservice:GlobalService,private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
@@ -24,6 +25,7 @@ export class ListstatusComponent implements OnInit {
         {
           this.dataSource=res.data
         }
+        this.loaddata=true
       })
       
     })

@@ -17,7 +17,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
-import { GoogleChartsModule } from 'angular-google-charts';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    GoogleChartsModule
+    NgChartsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

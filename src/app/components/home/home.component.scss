@@ -3,6 +3,14 @@
     display: flex;
     gap:10px;
 }
+table
+{
+    width: 100%;
+}
+.mat-header-cell, .mat-cell 
+{
+   text-align: center;
+}
 .cardcontainer
 {
     flex:1 1 auto;
@@ -10,12 +18,35 @@
     height:10vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
+    color:dodgerblue 
 }
-
-
-
+.buttonStyle
+{
+    padding:4px;
+    border-radius:5px;
+    color:white;
+    background-color:tomato;
+    font-weight: 500;
+    font-size: 1em;
+    float: right;
+    cursor: pointer;
+    width: 5vw;
+    text-align: center;
+}
+.buttonStyle:hover
+{
+    color:tomato;
+    background-color: white;
+}
+.cardcontainer:hover
+{
+    color: black;
+}
+.flexible
+{
+    flex: 1 1 auto;
+}
 mat-card-content
 {
     font-size: 1em;
@@ -24,7 +55,29 @@ mat-card-content
     width:100%;
     height: 100%;
 }
-
+.usercontainer
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    margin-top:5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.colorgreywhite
+{
+    color:#b0abab
+}
+.usercontainer:hover
+{
+    background-color: rgb(236, 172, 161);
+    cursor: pointer;
+    color:white;
+    .colorgreywhite
+    {
+        color:white;
+    }
+}
 .flexelement
 {
     width: 50%;
@@ -69,6 +122,10 @@ mat-card:hover
     .borderleft
     {
         border-left: 1.5px solid #ddd;
+    }
+    .buttonStyle
+    {
+        width: 15vw;
     }
 }
 

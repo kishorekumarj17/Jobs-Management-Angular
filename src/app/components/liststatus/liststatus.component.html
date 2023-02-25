@@ -1,4 +1,4 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table *ngIf="loaddata" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <ng-container matColumnDef="jobId">
       <th mat-header-cell *matHeaderCellDef>Job ID</th>
