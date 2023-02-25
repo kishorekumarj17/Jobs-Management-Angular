@@ -7,13 +7,24 @@
 
 ![image](https://user-images.githubusercontent.com/42991864/221349962-dcaf25e6-af07-4b17-a0b4-199de7016dbe.png)
 
+Sidenav:on hover
+
+![image](https://user-images.githubusercontent.com/42991864/221350127-82dd0a70-0cde-4416-85b9-82eab7f83590.png)
+
+Made responsively
+
+![image](https://user-images.githubusercontent.com/42991864/221350309-29c13258-0742-4285-90eb-7757978d0cf1.png)
+
+
 ## Jobs Page
 
 ![image](https://user-images.githubusercontent.com/42991864/221350002-571168c0-1488-4d48-a612-0e03f907f6d4.png)
 
+
 ## Details Page
 
 ![image](https://user-images.githubusercontent.com/42991864/221350022-aac77daa-5495-4b95-bed3-0258062ec505.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
