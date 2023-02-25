@@ -7,13 +7,13 @@
 
 ![image](https://user-images.githubusercontent.com/42991864/221349962-dcaf25e6-af07-4b17-a0b4-199de7016dbe.png)
 
-Sidenav:on hover
+Sidenav on hover
 
 ![image](https://user-images.githubusercontent.com/42991864/221350127-82dd0a70-0cde-4416-85b9-82eab7f83590.png)
 
 Made responsively
 
-![image](https://user-images.githubusercontent.com/42991864/221350309-29c13258-0742-4285-90eb-7757978d0cf1.png)
+![image](https://user-images.githubusercontent.com/42991864/221350402-177c241e-151d-4e17-8417-f214b971109b.png)
 
 
 ## Jobs Page
