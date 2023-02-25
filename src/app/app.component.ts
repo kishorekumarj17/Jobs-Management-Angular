@@ -55,5 +55,10 @@ export class AppComponent implements OnInit {
   {
     return window.innerWidth;
   }
+  
+  closesidebar(d:any)
+  {
+    window.innerWidth <=800 ? d.toggle():true;
+  }
 
 }

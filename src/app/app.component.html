@@ -19,12 +19,12 @@
       <mat-nav-list>
         <div style="margin-top: 10vh;"></div>
   
-        <mat-list-item (click)="navigateTo(['home'])">
+        <mat-list-item (click)="navigateTo(['home']);closesidebar(drawer)">
           <mat-icon mat-list-icon>home</mat-icon>
           <h4>Home</h4>
         </mat-list-item>
   
-        <mat-list-item (click)="navigateTo(['jobs','TOTAL'])">
+        <mat-list-item (click)="navigateTo(['jobs','TOTAL']);closesidebar(drawer)">
           <mat-icon mat-list-icon>description</mat-icon>
           <h4>All Jobs</h4>
         </mat-list-item>
