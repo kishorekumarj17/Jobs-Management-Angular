@@ -1,3 +1,8 @@
+<div *ngIf="!loaddata">
+    <br>
+  <div style="width: 100%;display: flex;align-items: center;justify-content: center;"><mat-spinner class="mat-spinner-color" diameter="40" *ngIf="!loaddata"></mat-spinner></div>
+    <br>
+  </div>  
 <div class="homecontainer">
 <mat-card class="cardcontainer" *ngFor="let element of statuslist | keyvalue" (click)="navigateTo(element.key)">
     <mat-card-content>

@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router,Event } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,7 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  showLoading:boolean=false;
   mypathdata:any=[]
   title = 'styleangular';
   sidenavOpen=true
@@ -19,7 +20,27 @@ export class AppComponent implements OnInit {
         this.mypathdata=event.url.split('/').filter((i)=>i.length>0).map((i)=>i[0].toUpperCase()+i.substring(1,i.length))
       }
     })
-    
+
+    this.router.events.subscribe((event: Event) => {
+      switch (true) {
+        case event instanceof NavigationStart: {
+          this.showLoading = true;
+          console.log("Navigation started")
+          break;
+        }
+
+        case event instanceof NavigationEnd:
+        case event instanceof NavigationCancel:
+        case event instanceof NavigationError: {
+          this.showLoading = false;
+          console.log("Navigation Ended")
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    });
   }
 
   navigateTo(arr:any)

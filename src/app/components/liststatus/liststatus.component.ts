@@ -11,6 +11,7 @@ export class ListstatusComponent implements OnInit {
   displayedColumns: string[] = ['jobId','status','assignedTo','details'];
   dataSource = [];
   loaddata:boolean=false;
+  search:any;
   constructor(private globalservice:GlobalService,private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {

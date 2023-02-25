@@ -1,4 +1,18 @@
-<table *ngIf="loaddata" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="formalign">
+<mat-form-field appearance="outline">
+  <mat-label>Search table</mat-label>
+  <input type="text" [(ngModel)]="search" matInput
+         placeholder="Search..">
+</mat-form-field>
+</div>
+
+<div *ngIf="!loaddata">
+  <br>
+<div style="width: 100%;display: flex;align-items: center;justify-content: center;"><mat-spinner class="mat-spinner-color" diameter="40" *ngIf="!loaddata"></mat-spinner></div>
+  <br>
+</div>
+
+<table *ngIf="loaddata" mat-table [dataSource]="dataSource | searchlistpipe:search" class="mat-elevation-z8">
 
     <ng-container matColumnDef="jobId">
       <th mat-header-cell *matHeaderCellDef>Job ID</th>
@@ -26,7 +40,14 @@
       </td>
     </ng-container>
 
+    <ng-container matColumnDef="noRecord">
+      <td mat-footer-cell *matFooterCellDef>{{((dataSource | searchlistpipe:search).length==0) ? 'No records found.':''}}</td>
+    </ng-container>
+
+    
+    <tr mat-footer-row *matFooterRowDef="['noRecord']"></tr>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+  
   

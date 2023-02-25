@@ -16,3 +16,24 @@ mat-icon
 {
     color: tomato !important;
 }
+
+mat-form-field
+{
+    width: 40%;
+}
+.hide { display: none; }
+@media (max-width: 800px) 
+{
+    .formalign
+    {
+        width: 100%;
+    }
+    mat-form-field
+    {
+        width: 100%;
+    }
+}
+.mat-spinner-color::ng-deep circle
+{
+    stroke: tomato !important;
+}

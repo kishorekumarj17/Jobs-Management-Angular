@@ -18,13 +18,19 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { NgChartsModule } from 'ng2-charts';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchlistpipePipe } from './common/pipe/searchlistpipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ListstatusComponent,
-    DetailsComponent
+    DetailsComponent,
+    SearchlistpipePipe
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,12 @@ import { NgChartsModule } from 'ng2-charts';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    NgChartsModule 
+    NgChartsModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
