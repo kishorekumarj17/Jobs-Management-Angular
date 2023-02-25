@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -9,6 +9,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class AppComponent implements OnInit {
   mypathdata:any=[]
   title = 'styleangular';
+  sidenavOpen=true
   constructor(private router:Router) { }
   ngOnInit(): void {
    
@@ -24,6 +25,16 @@ export class AppComponent implements OnInit {
   navigateTo(arr:any)
   {
     this.router.navigate(arr)
+  }
+
+  @HostListener('window:resize', ['$event'])
+  public setwidth(event:any) {
+    this.sidenavOpen= window.innerWidth <=800 ? false :true;
+  }
+
+  public getwidth():any
+  {
+    return window.innerWidth;
   }
 
 }

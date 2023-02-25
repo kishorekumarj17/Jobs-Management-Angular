@@ -1,6 +1,17 @@
 .card {
     max-width: 400px;
+    flex: 1 1 auto;
   }
 
+.cardscontainer
+{
+  display: flex;
+  gap: 10px;
+}
 
-  
+@media (max-width: 900px) 
+{
+    .cardscontainer {
+      flex-direction: column;
+    }
+}

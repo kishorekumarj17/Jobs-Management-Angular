@@ -58,6 +58,17 @@ mat-icon
     color: tomato !important;
 }
 
+.iconinlinealign
+{
+    display: inline-flex;
+    vertical-align:middle;
+}
+
+.spacer
+{
+    flex: 1 1 auto;
+}
+
 @media (max-width: 800px) 
 {
     mat-drawer:hover
@@ -75,13 +86,3 @@ mat-icon
     }
 }
 
-.iconinlinealign
-{
-    display: inline-flex;
-    vertical-align:middle;
-}
-
-.spacer
-{
-    flex: 1 1 auto;
-}
