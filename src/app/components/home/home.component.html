@@ -3,7 +3,7 @@
   <div style="width: 100%;display: flex;align-items: center;justify-content: center;"><mat-spinner class="mat-spinner-color" diameter="40" *ngIf="!loaddata"></mat-spinner></div>
     <br>
   </div>  
-<div class="homecontainer">
+<div class="homecontainer" *ngIf="loaddata">
 <mat-card class="cardcontainer" *ngFor="let element of statuslist | keyvalue" (click)="navigateTo(element.key)">
     <mat-card-content>
     <div class="flexelement boldfont">{{element.key}}</div><div class="flexelement borderleft">{{element.value}}</div>
@@ -11,7 +11,7 @@
 </mat-card>
 </div>
 <br>
-<div class="homecontainer">
+<div class="homecontainer" *ngIf="loaddata">
 <mat-card class="flexible">
     <span style="color:tomato;font-weight: 500;font-size: 1.3em;vertical-align:bottom;">On the way</span>
     <span class="buttonStyle" (click)="navigateTo('ON_MY_WAY')">View All</span>
