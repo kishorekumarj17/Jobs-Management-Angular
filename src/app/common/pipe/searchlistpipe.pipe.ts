@@ -15,7 +15,7 @@ export class SearchlistpipePipe implements PipeTransform {
       return value;
     }
     return value.filter((obj:any)=>{
-      return JSON.stringify(obj).includes(args[0])
+      return JSON.stringify(obj).toLowerCase().includes(args[0].toLowerCase())
     })
   }
 

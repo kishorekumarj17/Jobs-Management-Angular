@@ -108,6 +108,9 @@ mat-card:hover
     {
     border: 0px;
     }
+    .homecontainer {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 900px) 

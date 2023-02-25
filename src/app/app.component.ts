@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
       switch (true) {
         case event instanceof NavigationStart: {
           this.showLoading = true;
-          console.log("Navigation started")
           break;
         }
 
@@ -33,7 +32,6 @@ export class AppComponent implements OnInit {
         case event instanceof NavigationCancel:
         case event instanceof NavigationError: {
           this.showLoading = false;
-          console.log("Navigation Ended")
           break;
         }
         default: {
